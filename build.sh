@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-PROJECT_NAME=domo
 PROJECT_HOME=/home/admin/app/
 JAR_DIR=${PROJECT_NAME}-core/target
 JAR_NAME=${PROJECT_NAME}.jar
