@@ -27,7 +27,7 @@
         </encoder>
     </appender>
 
-    <springProfile name="dev, online, local, test">
+    <springProfile name="dev, online, local">
         <appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <!-- 文件路径 -->
             <file>${FILE_PATH}/jetty_stdout.log</file>
