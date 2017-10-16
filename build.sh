@@ -9,5 +9,5 @@ cd ${JAR_DIR}
 DOMO_PID=`ps -ef | grep "DOMO" | grep -v grep | awk '{print $2}'`
 echo "DOMO PID = $DOMO_PID"
 #kill -9 DOMO_PID
-java -jar ${JAR_NAME} --spring.profiles.active=#{EVN} --server.port=#{SERVER_PORT}
+java -jar ${JAR_NAME} --spring.profiles.active=${EVN} --server.port=${SERVER_PORT}
 echo "========Build successful======="
