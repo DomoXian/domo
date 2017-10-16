@@ -17,9 +17,6 @@ public class CommonController {
      */
     @RequestMapping(value = "/",method = {RequestMethod.GET,RequestMethod.POST})
     public String index(){
-        if(true){
-            throw  new RuntimeException("随便的异常");
-        }
         return "index";
     }
 
