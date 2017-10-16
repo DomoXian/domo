@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 PROJECT_HOME=/home/admin/app/
 JAVA_OPTIONS="
-    -server -Xms1g -Xmx1g -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m -Xmn512M
     -XX:+UseConcMarkSweepGC -XX:CMSMaxAbortablePrecleanTime=5000
     -XX:+CMSClassUnloadingEnabled -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=80
     -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/admin/app/logs/domo/online/java.hprof
