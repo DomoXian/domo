@@ -2,6 +2,7 @@ package com.leno.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.ArrayList;
@@ -18,6 +19,14 @@ public class DomoWebConfigAdapter extends WebMvcConfigurerAdapter {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new DomoIntercept()).excludePathPatterns(getExcludePathPatterns());
         super.addInterceptors(registry);
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/images/**").addResourceLocations("classpath:/templates/images/");
+        registry.addResourceHandler("/css/**").addResourceLocations("classpath:/templates/css/");
+        registry.addResourceHandler("/js/**").addResourceLocations("classpath:/templates/js/");
+        super.addResourceHandlers(registry);
     }
 
     /**

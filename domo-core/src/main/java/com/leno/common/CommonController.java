@@ -2,7 +2,6 @@ package com.leno.common;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by XianGuo
@@ -15,14 +14,19 @@ public class CommonController {
     /**
      * 首页
      */
-    @RequestMapping(value = "/",method = {RequestMethod.GET,RequestMethod.POST})
-    public String index(){
+    @RequestMapping("/")
+    public String index() {
         return "index";
     }
 
 
-    @RequestMapping(value = "/login",method = {RequestMethod.GET,RequestMethod.POST})
-    public String login(){
+    @RequestMapping("/login.html")
+    public String login() {
         return "login";
+    }
+
+    @RequestMapping("/index.html")
+    public String indexCus() {
+        return "index";
     }
 }
