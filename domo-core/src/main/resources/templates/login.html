@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Domo</title>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="css/domo.css"/>
 
-<h1>Login Domo Hoo !</h1>
+</head>
+<body style="background-color: white">
+<script type="text/javascript" src="js/domo.js"></script>
+
+<h1 style="text-align: center">Login Domo Hoo !</h1>
+<hr/>
+<h1 align="center">Login Domo Hoo !</h1>
+<hr/>
+<h1 align="center" id="domo">Login Domo Hoo !</h1>
+<script>
+    function myFunc() {
+        var x = document.getElementById("domo");
+        x.innerHTML = "Hello Js";
+    }
+
+    function changeImg() {
+        var x = document.getElementById("myImg");
+        if (x.src.match("bulboff")) {
+            x.src = "http://www.w3school.com.cn/i/eg_bulbon.gif";
+        } else {
+            x.src = "http://www.w3school.com.cn/i/eg_bulboff.gif";
+        }
+    }
+</script>
+
+
+<div id="div1"><h2>使用 jQuery AJAX 来改变文本</h2></div>
+<button>获得外部内容</button>
+
+<div>
+    <button type="button" onclick="myOnClick()" id="domoBtn">点击这里！</button>
+    <button type="button" id="test">测试！</button>
+
+    <img src="http://www.w3school.com.cn/i/eg_bulboff.gif" id="myImg" onclick="changeImg()"/>
+</div>
+
+
 </body>
 </html>

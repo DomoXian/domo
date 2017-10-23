@@ -1,7 +1,8 @@
 spring:
   profiles:
     active: local
-
+  application:
+    name: domo
 # redis配置
   redis:
     #服务器地址
@@ -31,8 +32,10 @@ spring:
     content-type: text/html
     cache: false
 
+
 # 日志配置
 logging:
   path: /Users/xianguo1/logs
   config: classpath:domo-logback.xml
+
 

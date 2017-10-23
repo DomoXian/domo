@@ -1,37 +1,8 @@
-spring:
-  profiles:
-    active: online
-
-# redis配置
-  redis:
-    #服务器地址
-    host: 106.14.144.168
-    #数据库索引（默认为0）
-    database: 0
-    #端口
-    port: 6379
-    #密码
-    password: r-uf641dc75a974ed4:Alix123456
-    #连接池
-    pool:
-      #最大连接数
-      max-active: 300
-      #最大阻塞等待时间
-      max-wait: 10000
-      #最大空闲连接
-      max-idle: 100
-      #最小空闲连接
-      min-idle: 0
-    #连接超时
-    timeout: 30000
-# 模板引擎配置
-  thymeleaf:
-    mode: HTML5
-    encoding: utf-8
-    content-type: text/html
-    cache: false
-
-# 日志配置
-logging:
-  path: /home/admin/app/logs/
-  config: classpath:domo-logback.xml
+server:
+  port: 8080
+# eureka-client配置
+eureka:
+  client:
+    service-url:
+      default-zone: http://106.14.144.168:8761/eureka/
+    enabled: true
